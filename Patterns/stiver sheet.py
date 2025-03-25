@@ -118,8 +118,112 @@ def nStarTriangle(n: int) -> None:
 
 nStarTriangle(5)
 """
+"""
+def nStarDiamond(n: int) -> None:
 
+    # Initialise 'gap' and 'stars'.
+    gap = n-1
+    stars = 1
+    for i in range(n):
+        for j in range(gap):
+            print(' ', end="")
+        for j in range(gap, gap+stars):
+            print('*', end="")
 
+        # End the current row of the pattern.
+        print()
+
+        gap -= 1
+        stars += 2
+nStarDiamond(5)
+"""
+
+"""
+*********
+ *******
+  *****
+   ***
+    *
+"""
+"""
+def nStarTriangle(n: int) -> None:
+    for i in range(n):
+        count = n - i-1
+        space = n - count-1
+        star = 2*count +1
+        print(' ' * space + '*' * star)
+
+nStarTriangle(5)
+"""
+
+"""
+    *
+   ***
+  *****
+ *******
+*********
+*********
+ *******
+  *****
+   ***
+    *
+"""
+"""
+def nStarDiamond(n: int) -> None:
+    for i in range(n):
+        space = n - i-1
+        star = 2*i+1
+        print(' ' * space + '*' * star)
+    for i in range(n):
+        count = n - i-1
+        space = n - count-1
+        star = 2*count+1
+        print(' ' * space + '*' * star)
+nStarDiamond(5)
+"""
+
+"""
+*
+**
+***
+****
+*****
+****
+***
+**
+*
+"""
+"""def nStarTriangle(n: int) -> None:
+    for i in range(2*n-1):
+        stars= i+1
+        if i>n-1:
+            stars = 2*n-i-1
+        print('*' * stars)
+
+nStarTriangle(5)
+"""
+
+"""
+1 
+0 1 
+1 0 1 
+0 1 0 1 
+1 0 1 0 1 
+"""
+"""
+def nBinaryTriangle(n: int) -> None:
+    start = 1
+    for i in range(n):
+        if i%2 == 0:
+            start= 1
+        else:
+            start= 0
+        for j in range(i+1):
+            print(start, end=' ')
+            start = 1-start
+        print()
+nBinaryTriangle(5)
+"""
 
 
 
