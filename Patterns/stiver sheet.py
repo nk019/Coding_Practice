@@ -325,6 +325,114 @@ def nLetterTriangle(n: int):
 nLetterTriangle(5)
 """
 
+"""
+A
+B B
+C C C
+D D D D
+E E E E E
+"""
+"""
+def alphaRamp(n: int) -> None:
+    for i in range(n):
+        print(" ".join(chr(65+i)*(i+1)))  #" ".join() adds space between word.
+alphaRamp(5)
+"""
+
+"""
+    A
+   ABC
+  ABCDE
+ ABCDEFG
+ABCDEFGHI
+"""
+"""
+def alphaHill(n: int):
+    for i in range(n):
+        for j in range(n- i-1):  
+            print(' ', end='')
+        for j in range(2*i+1):  # 2*i+1  give odd no series
+            print(chr(65+j), end='')
+        print()
+alphaHill(5)
+"""
+
+"""
+      A 
+    A B A 
+  A B C B A 
+A B C D C B A
+"""
+"""
+def alphaHill(n: int):
+    for i in range(n):
+        for j in range(n- i-1):
+            print(' ', end=' ')  #this is printing double spaces i.e. 2*(n-i-1) because of end=' '
+
+        breakPoint = (2*i+1)//2
+        for k in range(2*i+1):  # 2*i+1  give odd no series
+            if k<= breakPoint:
+                print(chr(65+k), end=' ')
+            else:
+                print(chr(65+breakPoint - (k- breakPoint)), end=' ')
+        print()
+alphaHill(4)
+
+#both the code does same thing but both approch are diffrent
+
+def alphabet_pyramid(n: int) -> None:
+    for i in range(n):
+        spaces = " " * (2 * (n - i - 1))  # Leading spaces
+        left_part = [chr(65 + j) for j in range(i + 1)]  # Increasing sequence
+        right_part = left_part[-2::-1]  # Decreasing sequence (excluding last letter)
+        print(spaces + " ".join(left_part + right_part))
+
+# Example usage
+alphabet_pyramid(4)
+"""
+
+"""
+E 
+D E 
+C D E 
+B C D E 
+A B C D E 
+"""
+"""
+def alphaTriangle(n: int):
+    for i in range(n):
+        for j in range(i+1):
+            print(chr(65+n-1-i+j), end=' ')
+        print()
+
+alphaTriangle(5)
+"""
+
+"""
+E 
+E D 
+E D C 
+E D C B 
+E D C B A
+"""
+"""
+def alphaTriangle(n: int):
+    for i in range(n):
+        for j in range(i+1):
+            print(chr(65+n-1-j), end=' ')
+        print()
+
+alphaTriangle(5)
+"""
+
+
+
+
+
+
+
+
+
 
 
 
