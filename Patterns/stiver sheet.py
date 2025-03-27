@@ -225,16 +225,105 @@ def nBinaryTriangle(n: int) -> None:
 nBinaryTriangle(5)
 """
 
+"""
+1                 1 
+1 2             2 1 
+1 2 3         3 2 1 
+1 2 3 4     4 3 2 1 
+1 2 3 4 5 5 4 3 2 1 
+"""
+"""
+def numberCrown(n: int) -> None:
+    space = 2 * (n - 1)
+    for i in range(n):
+        for j in range(i+1):
+            print((j+1), end=' ')
+        for j in range(space):
+            print(' ', end=' ')
+        for j in range(i,-1,-1):
+            print((j+1), end=' ')
+        print()
+        space -= 2
+numberCrown(5)
+"""
 
+"""
+1 
+2 3 
+4 5 6 
+7 8 9 10 
+11 12 13 14 15 
+"""
+"""
+def nNumberTriangle(n: int) -> None:
+    num = 1
+    for i in range(n):
+        for j in range(i+1):
+            print(num, end=' ')
+            num += 1
+        print()
+nNumberTriangle(5)
+"""
 
+"""
+A 
+A B 
+A B C 
+A B C D 
+A B C D E 
+"""
+"""
+def nLetterTriangle(n: int) -> None:
+    for i in range(n):
+        for j in range(i+1):
+            print(chr(65+j), end=' ')
+        print()
 
+nLetterTriangle(5)
+"""
+"""             #this code is better than previous code ---> why?????
+def nLetterTriangle(n: int):
+    num = 1
+    for i in range(n):
+        currentCharacter = 65
+        for j in range(1, num+1):
+            print(chr(currentCharacter), end=" ")
+            currentCharacter += 1
+        num += 1
+        print()
+nLetterTriangle(5)
+"""
 
+"""
+A B C D E 
+A B C D 
+A B C 
+A B 
+A 
+"""
+"""
+def nLetterTriangle(n: int):
+    for i in range(n):
+        count= n- i
+        for j in range(count):
+            print(chr(65+j), end=' ')
+        print()
 
-
-
-
-
-
+nLetterTriangle(5)
+# this code is better than next one ---> why??????
+"""
+"""
+def nLetterTriangle(n: int):
+    num = n
+    for i in range(n):
+        currentCharacter = 65
+        for j in range(1, num+1):
+            print(chr(currentCharacter), end=" ")
+            currentCharacter += 1
+        print()
+        num -= 1
+nLetterTriangle(5)
+"""
 
 
 
