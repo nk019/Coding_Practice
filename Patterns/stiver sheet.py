@@ -425,13 +425,94 @@ def alphaTriangle(n: int):
 alphaTriangle(5)
 """
 
+"""
+* * * * * * 
+* *     * * 
+*         * 
+*         * 
+* *     * * 
+* * * * * *
+"""
+"""
+def symmetry(n: int):
+    lStars = n
+    space = 0
+    rStars = n
+    for i in range(n):
+        print('* ' * lStars + '  ' * space + '* ' * rStars)
+        lStars -= 1
+        space += 2
+        rStars -= 1
 
+    lStars = 1
+    space = 2*n-2
+    rStars = 1
+    for i in range(n):
+        print('* ' * lStars + '  ' * space + '* ' * rStars)
+        lStars += 1
+        space -= 2
+        rStars += 1
+symmetry(3)
+"""
+"""
+def symmetry(n: int):
+    space = 0
+    for i in range(n):
+        for j in range(n-i):
+            print('*', end=' ')
+        for j in range(space):
+            print(' ', end=' ')
+        for j in range( n - i):
+            print('*', end=' ')
+        space += 2
+        print()
+    space = 2*n-2
+    for i in range(n):
+        for j in range(i+1):
+            print('*', end=' ')
+        for j in range(space):
+            print(' ', end=' ')
+        for j in range(i+1):
+            print('*', end=' ')
+        space -= 2
+        print()
 
+symmetry(3)
+"""
 
+"""
+*         * 
+* *     * * 
+* * * * * * 
+* *     * * 
+*         * 
+"""
+"""
+def symmetry(n: int):
+    space = 2*n-2
+    for i in range(n):
+        for j in range(i+1):
+            print('*', end=' ')
+        for j in range(space):
+            print(' ', end=' ')
+        for j in range(i+1):
+            print('*', end=' ')
+        space -= 2
+        print()
 
+    space = 2
+    for i in range(n-1):
+        for j in range(n-1-i):
+            print('*', end=' ')
+        for j in range(space):
+            print(' ', end=' ')
+        for j in range(n-1-i):
+            print('*', end=' ')
+        space += 2
+        print()
 
-
-
+symmetry(3)
+"""
 
 
 
