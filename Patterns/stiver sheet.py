@@ -514,6 +514,50 @@ def symmetry(n: int):
 symmetry(3)
 """
 
+"""
+* * * * *  
+*       * 
+*       * 
+*       * 
+* * * * * 
+"""
+"""
+def getStarPattern(n: int) -> None:
+    for i in range(n):
+        space = n-2
+        if i == 0 or i == n-1:
+            print("* " * n, end=' ')
+        else:
+            print("* " + "  "* space + "*", end=' ')
+        print()
+getStarPattern(5)
+"""
+
+"""
+3 3 3 3 3 
+3 2 2 2 3 
+3 2 1 2 3 
+3 2 2 2 3 
+3 3 3 3 3 
+"""
+"""
+def getNumberPattern(n: int) -> None:
+    for i in range(2*n-1):
+        for j in range(2*n-1):
+            top = i
+            bottom = 2*n-2-i
+            right = 2*n-2-j
+            left = j
+            print(n-min(top, bottom, right, left), end=' ')
+        print()
+
+getNumberPattern(3)
+"""
+
+
+
+
+
 
 
 
