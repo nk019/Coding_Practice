@@ -554,17 +554,3 @@ def getNumberPattern(n: int) -> None:
 getNumberPattern(3)
 """
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
