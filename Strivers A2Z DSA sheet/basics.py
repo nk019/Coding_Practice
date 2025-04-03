@@ -21,17 +21,51 @@ def evenlyDivides(n):
     counter  = 0
     n =str(n)
     for i in range(len(n)):
-        if int(n)%int(n[i])==0:
-            counter+=1
+        try:
+            if int(n)%int(n[i])==0:
+                counter+=1
+        except ZeroDivisionError as e:
+            counter += 0
+
     print(counter)
 
-evenlyDivides(23)
+evenlyDivides(20)
 """
 
+"""
+Reverse a 32 bit signed number 
+"""
+"""
+def reverse(x: int) -> int:
+    sign = [1, -1][x < 0]
+    rev, x = 0, abs(x)
+    while x:
+        x, mod = divmod(x, 10)
+        rev = rev * 10 + mod
+        if rev > 2 ** 31 - 1:
+            return 0
+    return sign * rev
 
+print(reverse(-12305))
+"""    ### use of list  samajh nhi aaya
+"""
+def reverse(self, x):
+    s = str(x)
+    if "-" in s:
+        p = s[-1:0:-1]
+        y = int(p)
+        x = -y
+    else:
+        p = s[::-1]
+        x = int(p)
 
-
-
+    if x > -(2 ** 31) and x < 2 ** 31 - 1:
+        return x
+    else:
+        return 0
+        
+print(reverse(-123))
+"""
 
 
 
