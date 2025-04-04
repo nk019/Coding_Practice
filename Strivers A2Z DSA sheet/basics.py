@@ -67,6 +67,76 @@ def reverse(self, x):
 print(reverse(-123))
 """
 
+"""
+check if string is palindrome
+"""
+"""
+def isPalindrome(x):
+    x = str(x)
+    a = x[-1::-1]
+    if a == x:
+        return True
+    else:
+        return False
+        
+
+print(isPalindrome(121))
+"""
+
+"""
+lcm and gcd of two numbers 
+euclidian method:
+gcd(a,b) = subtract two nums from each other until one of them is = 0 , the other one in gcd   
+Lcm(a,b)= (a times b) divide by gcd(a,b)
+"""
+"""
+def lcmAndGcd( a: int, b: int):
+    gcd = 0
+    lcm = 0
+    A= a
+    B = b
+    while a>0 and b>0:
+        if a>b:
+            a= a%b
+        else:
+            b= b%a
+    if a == 0:
+        gcd = b
+    else :
+        gcd= a
+    lcm = abs(A*B)//gcd
+    l= [lcm,gcd]
+    return l
+
+print(lcmAndGcd(5, 10))
+"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
