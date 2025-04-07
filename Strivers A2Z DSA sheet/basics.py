@@ -111,20 +111,40 @@ def lcmAndGcd( a: int, b: int):
 print(lcmAndGcd(5, 10))
 """
 
+"""
+check if the number is armstrong number.
+armstrong number is a number which is equal to sum of all digits raised to the 
+total number of digits eg-number of digits: 3, 153 = 13+53+33
+"""
+"""
+def armstrongNum(n):
+    num = str(n)
+    j=[]
+    arm_num = 0
+    while n>0:
+        j.append(n%10)
+        n=n//10
+    k=j[::-1]
+    for i in range(len(k)):
+        arm_num += k[i]**len(num)
+    if arm_num == int(num):
+        return True
+    else:
+        return False
 
+print(armstrongNum(9474))
+"""
+"""
+def armstrongNum(n):
+    digits = [int(d) for d in str(n)]
+    power = len(digits)
+    arm_num = sum(d ** power for d in digits)
+    return arm_num == n
 
-
-
-
-
-
-
-
-
-
-
-
-
+print(armstrongNum(9474))
+print(armstrongNum(774))
+print(armstrongNum(153))
+"""  #more sofisticated version of code. this is more tightly packed and COOL.
 
 
 
