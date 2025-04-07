@@ -6,6 +6,8 @@ def reverseTable(n:int) -> None:
         m -=1
 reverseTable(2)
 """   #code
+from mpmath import sqrtm
+
 """
 20 18 16 14 12 10 8 6 4 2 
 """   #output
@@ -145,6 +147,55 @@ print(armstrongNum(9474))
 print(armstrongNum(774))
 print(armstrongNum(153))
 """  #more sofisticated version of code. this is more tightly packed and COOL.
+
+'''
+sum of 1 to n divisors  
+eg:     Input: n = 4     Output: 15
+Explanation:  F(1) = 1,   F(2) = 1 + 2 = 3,   F(3) = 1 + 3 = 4,   F(4) = 1 + 2 + 4 = 7
+So, F(1) + F(2) + F(3) + F(4)
+    = 1 + 3 + 4 + 7 = 15
+'''
+'''
+import math
+def Divisors(m):
+    divisors = []
+    for n in range(1, m+1):
+        sqrt = math.sqrt(n)
+        for i in range(1, int(sqrt+1)):
+            if n%i == 0:
+                divisors.append(i)
+                if i!= n//i:
+                    divisors.append(n//i)
+    S = sum(divisors)
+    return S
+
+print(Divisors(5))
+'''
+'''
+def sumOfDivisors(n):
+    sum = 0
+    # Iterating from 1 to N.
+    for i in range(1, n + 1):
+        # Calculating and accumulating the sum of divisors.
+        sum += (n // i) * i
+    # Returning the sum of divisors.
+    return sum
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
