@@ -182,9 +182,24 @@ def sumOfDivisors(n):
     return sum
 '''
 
-
-
-
+'''
+check if the number is prime
+'''
+'''
+import math
+def isPrime(n):
+    factors = 0
+    for i in range(1, int(math.sqrt(n)) + 1):
+        if n % i == 0:
+            factors += 1
+            if i != n//i:
+                factors += 1
+    if factors == 2:
+        return True
+    else:
+        return False
+print(isPrime(59))
+'''
 
 
 
