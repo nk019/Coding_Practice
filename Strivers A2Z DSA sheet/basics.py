@@ -222,7 +222,17 @@ def printNos(initial, last):
 printNos(1, 10)
 """   # print each no in new line
 
-
+'''
+print a name   n number of time 
+'''
+'''
+def printGfg(n):
+    if n <= 0:
+        return
+    printGfg(n - 1)
+    print("GFG", end=" ")
+printGfg(5)
+'''
 
 
 
