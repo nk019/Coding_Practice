@@ -6,8 +6,6 @@ def reverseTable(n:int) -> None:
         m -=1
 reverseTable(2)
 """   #code
-from mpmath import sqrtm
-
 """
 20 18 16 14 12 10 8 6 4 2 
 """   #output
@@ -201,9 +199,28 @@ def isPrime(n):
 print(isPrime(59))
 '''
 
+#############*******************   $$$$       basic recursion      $$$$   *******************######################
 
+""" 
+print up to n nos using recursion
+"""
+"""
+def printNos(n):
+    if n<=0:
+        return
+    printNos(n-1)
+    print(n, end=' ')
+       
+printNos(10)
+"""   # print nos in a single line
+"""
+def printNos(initial, last):
+        if(initial<=last):
+            print(initial)
+            printNos(initial+1,last)
 
-
+printNos(1, 10)
+"""   # print each no in new line
 
 
 
