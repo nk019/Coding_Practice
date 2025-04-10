@@ -246,11 +246,45 @@ def printNos( n):
 printNos(10)
 '''
 
+'''
+Given an integer n, calculate the sum of series 13 + 23 + 33 + 43 + … till n-th term.
+'''
+'''
+def sumOfSeries(n):
+    sum = ((n**2)*(n+1)**2)/4
+    return sum
 
+print(sumOfSeries(5))
+'''    # mathematical
+'''
+def sumOfSeries(n):
+    if n==1:
+        return 1
+    return n**3 + sumOfSeries(n-1)
+print(sumOfSeries(5))
+'''    # recursion
 
-
-
-
+'''
+A number n is called a factorial number if it is the factorial of a positive integer.
+For example, the first few factorial numbers are 1, 2, 6, 24, 120,
+Given a number n, the task is to return the list/vector of the factorial numbers smaller than or equal to n.
+'''
+# at fist postion-> 1*1 =>    1      at second-> 1*2 =>    2      at third -> 2*3 =>    6       at fourth 6*4 =>24 and so on
+#                 res*i => new res         new res*i    new res         new res*i    new res
+# where postion is i and previous reslt is res
+'''
+def factorialNumbers(n):
+    # code here
+    factorials = []
+    number = 1
+    i = 1
+    while number <= n:
+        factorials.append(number)
+        i += 1
+        number *= i
+    return factorials
+print(factorialNumbers(50))
+'''
 
 
 
