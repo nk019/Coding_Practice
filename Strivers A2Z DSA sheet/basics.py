@@ -202,7 +202,7 @@ print(isPrime(59))
 #############*******************   $$$$       basic recursion      $$$$   *******************######################
 
 """ 
-print up to n nos using recursion
+print up to n number using recursion
 """
 """
 def printNos(n):
@@ -234,8 +234,17 @@ def printGfg(n):
 printGfg(5)
 '''
 
-
-
+'''
+print from N to 1 no.
+'''
+'''
+def printNos( n):
+    if n <= 0:
+        return
+    print(n, end=' ')
+    printNos(n - 1)
+printNos(10)
+'''
 
 
 
