@@ -6,6 +6,8 @@ def reverseTable(n:int) -> None:
         m -=1
 reverseTable(2)
 """   #code
+from holoviews.examples.gallery.apps.flask.flask_app import index
+
 """
 20 18 16 14 12 10 8 6 4 2 
 """   #output
@@ -301,7 +303,7 @@ print(reverse([1,4,3,2,6,5]))
 '''
 
 '''
-valid panlindrome
+valid palindrome
 '''
 '''
 def isPalindrome(s):
@@ -352,9 +354,9 @@ print(fib(10))
 
 ####################         *****    HASHING   *****     ###################################
 '''
-count the frequency of each digit in an arry   ---> inplace 
+count the frequency of each digit in an array   ---> inplace 
 '''
-
+'''
 def frequencyCount(arr):
     hash = [0] * len(arr)
     for i in arr:
@@ -363,12 +365,23 @@ def frequencyCount(arr):
     return hash
 
 print(frequencyCount([1,2,3,3,3,6,4]))
+'''
+
+'''
+most frequent number ; if there are multiple then smallest of them 
+'''
+
+from collections import Counter    #collection is in-build python module and counter is a class from this module
+                                   # counter help counts the occurrence of elements in list or iterable
+def mostFrequentElement(arr):
+    count = Counter(arr)
+    max_freq = max(count.values())
+
+    most_frequent = [num for num, freq in count.items() if freq == max_freq]  #list comprehension
+    return min(most_frequent)
 
 
-
-
-
-
+print(mostFrequentElement([5,5,6,7,2,1,4,5,3,5,3,3,3]))
 
 
 
