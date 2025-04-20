@@ -116,7 +116,7 @@ print(lcmAndGcd(5, 10))
 """
 check if the number is armstrong number.
 armstrong number is a number which is equal to sum of all digits raised to the 
-total number of digits eg-number of digits: 3, 153 = 13+53+33
+total number of digits eg-number of digits: 3, 153 = 1^3+5^3+3^3
 """
 """
 def armstrongNum(n):
@@ -370,7 +370,7 @@ print(frequencyCount([1,2,3,3,3,6,4]))
 '''
 most frequent number ; if there are multiple then smallest of them 
 '''
-
+'''
 from collections import Counter    #collection is in-build python module and counter is a class from this module
                                    # counter help counts the occurrence of elements in list or iterable
 def mostFrequentElement(arr):
@@ -382,9 +382,9 @@ def mostFrequentElement(arr):
 
 
 print(mostFrequentElement([5,5,6,7,2,1,4,5,3,5,3,3,3]))
+'''
 
 
-
-
+l
 
 
